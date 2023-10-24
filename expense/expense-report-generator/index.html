@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Generador de reportes de gasto - Expense</title>
+    <meta name="description" content="Zoho Expense enables you to generate Expense Reports for FREE. Just Fill in the Report Details and Print Unlimited Expense Reports Online. Get Started Now.">
+    <meta name="keywords" content="expense report generator print PDF">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    
+      
+        <link rel="alternate" href="https://www.zoho.com/expense/expense-report-generator/" hreflang="x-default">
+      
+        <link rel="alternate" href="https://www.zoho.com/uk/expense/expense-report-generator/" hreflang="en-gb">
+      
+        <link rel="alternate" href="https://www.zoho.com/us/expense/expense-report-generator/" hreflang="en-us">
+      
+        <link rel="alternate" href="https://www.zoho.com/ca/expense/expense-report-generator/" hreflang="en-ca">
+      
+        <link rel="alternate" href="https://www.zoho.com/au/expense/expense-report-generator/" hreflang="en-au">
+      
+        <link rel="alternate" href="https://www.zoho.com/in/expense/expense-report-generator/" hreflang="en-in">
+      
+        <link rel="alternate" href="https://www.zoho.com/ae/expense/expense-report-generator/" hreflang="en-ae">
+      
+        <link rel="alternate" href="https://www.zoho.com/sa/expense/expense-report-generator/" hreflang="en-sa">
+      
+        <link rel="alternate" href="https://www.zoho.com/bh/expense/expense-report-generator/" hreflang="en-bh">
+      
+        <link rel="alternate" href="https://www.zoho.com/es-mx/expense/expense-report-generator/" hreflang="en-mx">
+      
+        <link rel="alternate" href="https://www.zoho.com/om/expense/expense-report-generator/" hreflang="en-om">
+      
+        <link rel="alternate" href="https://www.zoho.com/de/expense/expense-report-generator/" hreflang="en-de">
+      
+
+      <link rel="canonical" href="https://www.zoho.com/es-mx/expense/expense-report-generator/">
+    
+
+    <link rel="SHORTCUT ICON" href="https://www.zohowebstatic.com/sites/zweb/images/favicon.ico">
+    <style type="text/css">
+@font-face {
+  font-family: 'Zoho Puvi';
+  src: url("https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Light.woff2") format('woff2'),
+    url("https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Light.woff") format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zoho Puvi';
+  src: url("https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Regular.woff2") format('woff2'),
+    url("https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Regular.woff") format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zoho Puvi';
+  src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Medium.woff2') format('woff2'),
+    url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zoho Puvi';
+  src: url("https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Semibold.woff2") format('woff2'),
+    url("https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Semibold.woff") format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zoho Puvi';
+  src: url("https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Bold.woff2") format('woff2'),
+    url("https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Bold.woff") format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zoho Puvi';
+  src: url("https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Extrabold.woff2") format('woff2'),
+    url("https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Extrabold.woff") format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+</style>
+    <link href="https://www.zoho.com/expense/styles/bootstrap.min.css" rel="stylesheet">
+    <link href="https://www.zoho.com/expense/styles/bootstrap-datepicker3.min.css" rel="stylesheet">
+    <link href="https://www.zoho.com/expense/expense-report-generator/styles/generator.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header class="main-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="https://www.zoho.com/es-mx/expense?utm_source=zoho&amp;utm_medium=webpage&amp;utm_campaign=reportgenerator">
+              <img alt="Zoho Expense" src="https://www.zoho.com/expense/help/images/common/ze-white.png">
+            </a>
+          </div>
+
+          <ul class="list-inline pull-right social-media">
+            <li>Comparte la herramienta</li>
+            <li>
+              <a class="social-twitter" href="#" target="_blank" rel="noopener noreferrer"></a>  <!--ignore lint-->
+            </li>
+            <li>
+              <a class="social-fb" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"></a> <!--ignore lint-->
+            </li>
+            <li>
+              <a class="social-gplus" href="#" target="_blank" rel="noopener noreferrer"></a>
+            </li>
+           </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="main-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="report-generator-container">
+              <form name="reportgenerator">
+                <div class="row">
+                  <div class="col-md-8">
+                    <input type="text" class="form-control input-lg" placeholder="Nombre de la empresa" name="company_name" onfocus="report.showHideErr('company_name', false)">
+                    <small id="company_name_error" class="text-danger hide">Ingresa el nombre de tu empresa</small>
+                    <input type="text" class="form-control input-sm" placeholder="Dirección de la empresa" name="company_address_1">
+                    <input type="text" class="form-control input-sm" placeholder="Ciudad, C.P." name="company_address_2">
+                    <input type="text" class="form-control input-sm" placeholder="País" name="company_country">
+                  </div>
+
+                  <div class="col-md-4 report-title">
+                    Informe de Gastos
+                    <input type="text" class="form-control input-lg" placeholder="Reporte No" name="report_number" value="Rep-10001">
+                  </div>
+                </div>
+
+                <hr />
+                <div class="row">
+                  <div class="col-md-5">
+                    <input type="text" class="form-control input-lg" placeholder="Título del reporte" name="report_title" onfocus="report.showHideErr('report_title', false)">
+                    <small id="report_title_error" class="text-danger hide">Ingresa el título del reporte</small>
+                    <textarea id="business-purpose" class="form-control" placeholder="Proposito del Gasto" name="business_purpose"></textarea>
+                  </div>
+
+                  <div class="col-md-7">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-sm-5">
+                          <label class="font-sm light-bg">Elaborado por</label>
+                          <input type="text" class="form-control input-sm show-border" name="submitter_name">
+                        </div>
+                        <div class="col-sm-7">
+                          <label class="font-sm light-bg">Fecha</label>
+                          <input type="text" id="submitted_date" class="form-control input-sm show-border" name="submitted_date" onfocus="report.showHideErr('end_date', false)">
+                        </div>
+                      </div>
+                      <div class="row" style="padding-top: 10px;">
+                        <div class="col-sm-5">
+                          <label class="font-sm light-bg">Autorizado por:</label>
+                          <input type="text" class="form-control input-sm show-border" name="approver_name">
+                        </div>
+                        <div class="col-sm-7">
+                          <label class="font-sm light-bg">Rango de fechas:</label>
+                          <div class="form-inline">
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <input type="text" id="startDate" class="form-control" placeholder="From Date" name="start_date" onfocus="report.showHideErr('start_date', false)">
+                                <small id="start_date_error" class="text-danger hide">Fecha de inicio</small>
+                              </div>
+                              <div class="col-sm-6">
+                                <input type="text" id="endDate" class="form-control" placeholder="End Date" name="end_date" onfocus="report.showHideErr('end_date', false)">
+                                <small id="end_date_error" class="text-danger hide">Fecha final</small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive" style="margin-top: 50px;">
+                  <table class="table expense-table" id="expense-items">
+                    <thead>
+                      <tr>
+                        <th class="line_items_header" style="width: 17%;">Fecha</th>
+                        <th class="line_items_header" >Descripción del Gasto</th>
+                        <th class="line_items_header" >Comercio</th>
+                        <th class="line_items_header text-right" style="width: 15%;">Importe</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr id="default-hidden-expense" class="expense-row hide" data-parent-node="Gasto" onclick="report.showHideErr('report', false)">
+                        <td>
+                          <input type="text" class="form-control" id="date" placeholder="Fecha del Gasto" name="expense_date" data-expense-line-item="true" onblur="report.updateLineItemModel(this);">
+                        </td>
+                        <td>
+                          <textarea id="description" class="form-control" placeholder="Descripción" name="expense_description" data-expense-line-item="true" onblur="report.updateLineItemModel(this);"></textarea>
+                        </td>
+                        <td>
+                          <input type="text" class="form-control" placeholder="Nombre del establecimiento" name="expense_merchant_name" data-expense-line-item="true" onblur="report.updateLineItemModel(this);">
+                        </td>
+                        <td>
+                          <input type="number" class="form-control text-right" placeholder="Total" name="expense_amount" value="0.00" data-expense-line-item="true" onblur="report.updateLineItemModel(this); report.calculateExpenseTotal();">
+                          <span class="close" onclick="report.removeExpense($(this).closest('tr'));"></span>
+                        </td>
+                      </tr>
+                      <tr id="report_error" class="hide">
+                        <td colspan="4">
+                          <div class="alert alert-danger" role="alert">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>
+                            Ingrese por lo menos un gasto
+                          </div>
+                        </td>
+                      </tr>
+                      <tr id="report-total-row">
+                        <td colspan="2">
+                          <a id="new-expense-link" onclick="report.appendExpense();">Agregar Gasto</a>
+                        </td>
+                        <td colspan="2" class="total-cell">
+                          <b id="report-total" class="pull-right report-total">0.00</b>
+                          <input type="hidden" id="currency-code" name="currency_code" data-json-node="currency_code" value="MXN" />
+                          <input type="text" name="currency_symbol" id="currency_symbol" class="currency form-control text-right pull-right" value="$" onclick="showCurrencySelect(this);">
+                          <select class="hide currency form-control pull-right" id="currency-select" onchange="setCurrency(this)">
+                          </select>
+                          <label>TOTAL</label>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </form>
+              <div class="generator-footer text-right">
+                <span>
+                  <a href="https://www.zoho.com/es-mx/expense?utm_source=zoho&amp;utm_medium=webpage&amp;utm_campaign=reportgenerator">Powered by <img src="images/zelix-logo.svg?v=1"  alt="Zoho Expense" width="150" height="32"/></a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="save-report-section">
+              <h3>¿Todo listo? ¡Hurra!</h3>
+              <div>Ahora, elige cómo deseas recibir tu reporte.</div>
+
+              <div class="actions">
+                <div class="form-group">
+                  <button class="btn btn-block btn-filled" onclick="report.generatePDF();">Exportar como PDF</button>
+                </div>
+
+                <div class="form-group">
+                  <button class="btn btn-block btn-outline" onclick="report.generatePDF(true);">Imprimir Reporte</button>
+                </div>
+              </div>
+            </div>
+            <div class="contact-us">
+              <div>
+                ¿Necesitas Ayuda?
+                <a class="ze-contact-support-mail" href="mailto:contacto@proteusdigitalmedia.com" name="supportEmail">
+                  Contacto
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9">
+            <div class="footer">
+            	© 2023, Zelix, Av 1ro de Mayo 100, Acambaro, Gto. Mex. C.P. 386008, Soporte: contacto@proteusdigitalmedia.com | Ventas: +52 417-130-8050.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script type="text/javascript" src="https://www.zoho.com/expense/js/jquery-2.1.0.min.js"></script>
+  <script type="text/javascript" src="https://www.zoho.com/expense/js/bootstrap-datepicker.min.js"></script>
+  <script type="text/javascript" src="https://www.zoho.com/expense/js/autosize.min.js"></script>
+  <script type="text/javascript" src="https://www.zoho.com/expense/js/report-generator.js"></script>
+
+  <script type="text/javascript">
+  var name = "ZohoExpenseRef";
+  var pageURL = "https://www.zoho.com/es-mx/expense/expense-report-generator/ZohoExpensePageURL";
+
+  function createCookie(refCookieName, urlCookieName) {
+    var cookieExist = document.cookie.indexOf(refCookieName) >= 0;
+    var referrer = document.referrer;
+
+    if (!cookieExist && referrer) {
+      var expiry = new Date();
+      var days = 30;
+      expiry.setTime(expiry.getTime() + (days * 24 * 60 * 60 * 1000));
+
+      var affix = '; expires=' + expiry.toUTCString() + '; domain=.zoho.com; path=/';
+
+      
+
+
+      document.cookie = refCookieName + '=' + encodeURIComponent(referrer) + affix;
+      document.cookie = urlCookieName + '=' + encodeURIComponent(window.location.href) + affix;
+    }
+  }
+
+  createCookie(name,pageURL);
+
+  
+
+  function zohoGASignupEvent() { }
+  function zohoFedClickEvent() { }
+  function zcTrackClick() { }
+
+   
+</script>
+
+
+<script type="text/javascript">
+  (function(w,s){var e=document.createElement("script");e.type="text/javascript";e.async=true;
+  e.src="https://zohotagmanager.cdn.pagesense.io/ztmjs/9e14ca550fb345518206a5a65a40a7a9.js";
+  var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(e,x);})(window,"script");
+</script>
+
+
+  <script>"use strict";function getCountryName(a){return{AF:"Afghanistan",AX:"Aland Islands",AL:"Albania",DZ:"Algeria",AS:"American Samoa",AD:"Andorra",AO:"Angola",AI:"Anguilla",AG:"Antigua and Barbuda",AR:"Argentina",AM:"Armenia",AW:"Aruba",AC:"Ascension",AU:"Australia",AT:"Austria",AZ:"Azerbaijan",BS:"Bahamas",BH:"Bahrain",BD:"Bangladesh",BB:"Barbados",BY:"Belarus",BE:"Belgium",BZ:"Belize",BJ:"Benin",BM:"Bermuda",BT:"Bhutan",BO:"Bolivia",BA:"Bosnia and Herzegovina",BW:"Botswana",BR:"Brazil",VG:"British Virgin Islands",BN:"Brunei Darussalam",BG:"Bulgaria",BF:"Burkina Faso",BI:"Burundi",KH:"Cambodia",CM:"Cameroon",CA:"Canada",CV:"Cape Verde",KY:"Cayman Islands",CF:"Central African Republic",TD:"Chad",CL:"Chile",CN:"China",CO:"Colombia",KM:"Comoros",CG:"Congo",CK:"Cook Islands",CR:"Costa Rica",CI:"Cote d'Ivoire",HR:"Croatia",CU:"Cuba",CW:"Curacao",CY:"Cyprus",CZ:"Czech Republic",CD:"Democratic Republic of the Congo",DK:"Denmark",DG:"Diego Garcia",DJ:"Djibouti",DM:"Dominica",DO:"Dominican Republic",TL:"East Timor",EC:"Ecuador",EG:"Egypt",SV:"El Salvador",GQ:"Equatorial Guinea",ER:"Eritrea",EE:"Estonia",ET:"Ethiopia",FK:"Falkland Islands",FO:"Faroe Islands",FJ:"Fiji",FI:"Finland",FR:"France",GF:"French Guiana",PF:"French Polynesia",GA:"Gabon",GM:"Gambia",GE:"Georgia",DE:"Germany",GH:"Ghana",GI:"Gibraltar",GR:"Greece",GL:"Greenland",GD:"Grenada",GP:"Guadeloupe",GU:"Guam",GT:"Guatemala",GN:"Guinea",GW:"Guinea-Bissau",GY:"Guyana",HT:"Haiti",HN:"Honduras",HK:"Hong Kong",HU:"Hungary",IS:"Iceland",IN:"India",ID:"Indonesia",IR:"Iran",IQ:"Iraq",IE:"Ireland",IL:"Israel",IT:"Italy",JM:"Jamaica",JP:"Japan",JO:"Jordan",KZ:"Kazakhstan",KE:"Kenya",KI:"Kiribati",XK:"Kosovo",KW:"Kuwait",KG:"Kyrgyzstan",LA:"Laos",LV:"Latvia",LB:"Lebanon",LS:"Lesotho",LR:"Liberia",LY:"Libya",LI:"Liechtenstein",LT:"Lithuania",LU:"Luxembourg",MO:"Macao",MK:"Macedonia",MG:"Madagascar",MW:"Malawi",MY:"Malaysia",MV:"Maldives",ML:"Mali",MT:"Malta",MH:"Marshall Islands",MQ:"Martinique",MR:"Mauritania",MU:"Mauritius",MX:"Mexico",FM:"Micronesia",MD:"Moldova",MC:"Monaco",MN:"Mongolia",ME:"Montenegro",MS:"Montserrat",MA:"Morocco",MZ:"Mozambique",MM:"Myanmar",NA:"Namibia",NR:"Nauru",NP:"Nepal",NL:"Netherlands",AN:"Netherlands Antilles",NC:"New Caledonia",NZ:"New Zealand",NI:"Nicaragua",NE:"Niger",NG:"Nigeria",NU:"Niue",KP:"North Korea",MP:"Northern Mariana Islands",NO:"Norway",OM:"Oman",PK:"Pakistan",PW:"Palau",PS:"Palestine",PA:"Panama",PG:"Papua New Guinea",PY:"Paraguay",PE:"Peru",PH:"Philippines",PL:"Poland",PT:"Portugal",PR:"Puerto Rico",QA:"Qatar",RE:"Reunion",RO:"Romania",RU:"Russia",RW:"Rwanda",SH:"Saint Helena",KN:"Saint Kitts and Nevis",LC:"Saint Lucia",PM:"Saint Pierre and Miquelon",VC:"Saint Vincent and Grenadines",WS:"Samoa",SM:"San Marino",ST:"Sao Tome and Principe",SA:"Saudi Arabia",SN:"Senegal",RS:"Serbia",SC:"Seychelles",SL:"Sierra Leone",SG:"Singapore",SK:"Slovakia",SI:"Slovenia",SB:"Solomon Islands",SO:"Somalia",ZA:"South Africa",KR:"South Korea",SS:"South Sudan",ES:"Spain",LK:"Sri Lanka",SD:"Sudan",SR:"Suriname",SZ:"Swaziland",SE:"Sweden",CH:"Switzerland",SY:"Syria",TW:"Taiwan",TJ:"Tajikistan",TZ:"Tanzania",TH:"Thailand",TG:"Togo",TK:"Tokelau",TO:"Tonga",TT:"Trinidad and Tobago",TN:"Tunisia",TR:"Turkey",TM:"Turkmenistan",TC:"Turks and Caicos Islands",TV:"Tuvalu",UG:"Uganda",UA:"Ukraine",AE:"United Arab Emirates",GB:"United Kingdom",US:"United States",UY:"Uruguay",VI:"US Virgin Islands",UZ:"Uzbekistan",VU:"Vanuatu",VA:"Vatican City",VE:"Venezuela",VN:"Vietnam",WF:"Wallis and Futuna",YE:"Yemen",ZM:"Zambia",ZW:"Zimbabwe"}[a]}var zipCookie=decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*zip\\s*\\=\\s*([^;]*).*$)|^.*$"),"$1"))||null;if(zipCookie){var zipCookieSplit=zipCookie.split("|");window.CountryCode=zipCookieSplit[1].toUpperCase(),window.CountryName=getCountryName(window.CountryCode)}</script>
+  <script src="https://www.zoho.com/expense/js/index.js?v=8" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    var $currencySelectField = $("#currency-select");
+    var $currencySymbolField = $("#currency_symbol");
+
+    var report;
+
+    $(document).ready(function() {
+
+      report = new ReportGenerator();
+      var todayDate = $.fn.datepicker.DPGlobal.formatDate(new Date(), $.fn.datepicker.DPGlobal.parseFormat("M dd, yyyy"), "en");
+
+      $("#startDate").attr("placeholder", todayDate);
+      $("#endDate").attr("placeholder", todayDate);
+
+      $('#startDate').datepicker({
+        format: "M dd, yyyy",
+        autoclose: true,
+        orientation: 'auto',
+        keyboardNavigation: false,
+        todayHighlight: true
+      });
+
+      $('#endDate').datepicker({
+        format: "M dd, yyyy",
+        autoclose: true,
+        orientation: 'auto',
+        keyboardNavigation: false,
+        todayHighlight: true
+      });
+      $('#submitted_date').datepicker({
+        format: "M dd, yyyy",
+        autoclose: true,
+        orientation: 'auto',
+        keyboardNavigation: false,
+        todayHighlight: true
+      });
+
+      autosize($("#business-purpose"));
+
+      $.each(supportedCurrencies, function(key, item) {
+        $currencySelectField
+          .append($("<option></option>")
+          .attr("value", item.currency_code)
+          .attr("symbol", item.currency_symbol)
+          .text(item.currency_name + " (" + item.currency_symbol + ")"));
+      });
+
+      $currencySelectField.val($("#currency-code").val());
+    });
+
+    function showCurrencySelect(currencySymbolField) {
+      $currencySymbolField.addClass('hide');
+      $currencySelectField.removeClass('hide');
+    }
+
+    function setCurrency(currencySelect) {
+      $currencySelectField.addClass('hide');
+      $currencySymbolField.removeClass('hide');
+
+      $currencySymbolField.val($currencySelectField.find('option:selected').attr('symbol'));
+
+      
+      report.expenses.forEach(function(expense) {
+        expense.update('currency_code', $("#currency-code").val());
+      });
+    }
+
+  </script>
+
+  </body>
+</html>
